@@ -8,7 +8,7 @@ const sass = require("gulp-sass");
  */
 const compileSass = () =>
   // style.scssファイルを取得
-  src("css/*.scss")
+  src("src/sass/*.scss")
     // Sassのコンパイルを実行
     .pipe(
       // コンパイル後のCSSを展開
@@ -17,12 +17,12 @@ const compileSass = () =>
       })
     )
     // cssフォルダー以下に保存
-    .pipe(dest("dest/css"));
+    .pipe(dest("dest/css/"));
 
 /**
  * Sassファイルを監視し、変更があったらSassを変換します
  */
-const watchSassFiles = () => watch("css/*.scss", compileSass);
+const watchSassFiles = () => watch("src/sass/*.scss", compileSass);
 
 // npx gulpというコマンドを実行した時、watchSassFilesが実行されるようにします
 exports.default = watchSassFiles;

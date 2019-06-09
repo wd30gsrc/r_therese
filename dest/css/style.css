@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Optim;
+  src: url("../fonts/Optim") format("truetype");
+}
+
+img {
+  width: 100%;
+}
+
+.top-menu {
+  text-align: center;
+}
+
+.top-menu ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.top-menu ul li {
+  margin: 0 25px;
+}
+
+.main-img {
+  width: 80%;
+  margin: 0 auto;
+}
